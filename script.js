@@ -3,7 +3,7 @@ const APPS_DATA = [
     {
       id: '1',
       name: 'I miss you mom - Mourning',
-      shortDescription: 'App dedicada a ese ser tan especial llamado madre, aún después de muerta ..',
+      shortDescription: '😭​ App dedicada a ese ser tan especial llamado madre, aún después de muerta ..',
       category: 'Entretenimiento',
       rating: 4.9,
       downloads: '10.000+',
@@ -14,14 +14,14 @@ const APPS_DATA = [
     },
     {
       id: '2',
-      name: 'Biblia: Dios Habla Hoy',
-      shortDescription: 'Lee la Sagrada Biblia, con la versión más actualizada.',
+      name: 'BIBLIA Lenguaje Actual',
+      shortDescription: '✝️​ La Sagrada Biblia Traducción al Lenguaje Actual (TLA) no es una adaptación o paráfrasis de ninguna versión castellana existente.',
       category: 'Estilo de Vida',
       rating: 4.8,
-      downloads: '10+',
-      imageUrl: 'https://plus.unsplash.com/premium_photo-1663127489224-47dfd0639f54?w=400',
-      UrlApp: 'Construccion/index.html',
-      playStoreUrl: 'Construccion/index.html',
+      downloads: '100.000+',
+     imageUrl: 'img/img2.png',
+      UrlApp: 'tla/index.html',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.mobincube.biblia_lenguaje_actual_gratis_sin_internet',
       tags: ['Libros', 'Religión', 'Oración']
     },
     {
@@ -31,7 +31,7 @@ const APPS_DATA = [
       category: 'Entretenimiento',
       rating: 4.8,
       downloads: '10.000+',
-      imageUrl: 'img/img2.png',
+      imageUrl: 'img/img3.png',
       UrlApp: 'indirectas/index.html',
       playStoreUrl: 'https://play.google.com/store/apps/details?id=com.mobincube.indirectas_para_todos.sc_E34REU',
       tags: ['Indirectas', 'Humor Negro', 'Frases']
