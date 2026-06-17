@@ -35,7 +35,19 @@ const APPS_DATA = [
       UrlApp: 'indirectas/index.html',
       playStoreUrl: 'https://play.google.com/store/apps/details?id=com.mobincube.indirectas_para_todos.sc_E34REU',
       tags: ['Indirectas', 'Humor Negro', 'Frases']
-    }
+    },
+    {
+      id: '4',
+      name: 'Biblia Nueva versión internacional',
+      shortDescription: '✝️ La Biblia Nueva Versión Internacional tiene su origen en un proyecto de traducción moderno de la Asociación Nacional de Evangélicos de los EE.UU. en 1957.',
+      category: 'Estilo de Vida',
+      rating: 4.3,
+      downloads: '1.000+',
+      imageUrl: 'img/img4.png',
+      UrlApp: 'nvi/index.html',
+      playStoreUrl: ' https://play.google.com/store/apps/details?id=com.mobincube.biblia_nvi_en_espanol_sin_internet_copy.sc_8ATZNG',
+      tags: ['Libros', 'Religión', 'Oración']
+    },
   ];
   
   const CATEGORIES = ['Todas', 'Productividad', 'Entretenimiento', 'Utilidades', 'Estilo de Vida'];
