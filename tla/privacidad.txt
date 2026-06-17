@@ -1,0 +1,67 @@
+POLÍTICAS DE PRIVACIDAD DE SARCASIA: FRASES E IMÁGENES
+
+Última actualización: Marzo 2026
+
+1. INTRODUCCIÓN
+
+Bienvenido a SarcasIA Frases e Imágenes. Esta aplicación está diseñada para proporcionar contenido de frases e imágenes para expresar sentimientos de manera creativa. Al utilizar nuestra aplicación, usted acepta los términos y condiciones descritos en esta Política de Privacidad.
+
+2. RECOLECCIÓN DE INFORMACIÓN
+
+2.1 Información que recopilamos:
+- Preferencias de usuario configuradas en la aplicación
+- Historial de frases y categorías visualizadas
+- Datos de uso anónimos para mejorar la experiencia
+
+2.2 Información que NO recopilamos:
+- Información personal identificable
+- Datos de ubicación
+- Contactos del dispositivo
+- Información de otras aplicaciones
+
+3. USO DE LA INFORMACIÓN
+
+La información recopilada se utiliza para:
+- Personalizar la experiencia del usuario
+- Mostrar contenido relevante según preferencias
+- Mejorar y optimizar la aplicación
+- Solucionar problemas técnicos
+
+4. ALMACENAMIENTO DE DATOS
+
+Los datos se almacenan localmente en su dispositivo mediante:
+- DataStore Preferences para configuraciones
+- Base de datos Room para contenido de la app
+
+No transferimos sus datos a servidores externos.
+
+5. PERMISOS
+
+La aplicación puede solicitar los siguientes permisos:
+- Internet: Para cargar contenido y recursos externos
+- Almacenamiento: Para guardar imágenes generadas
+
+6. PUBLICIDAD
+
+Nuestra aplicación puede mostrar publicidad. Los anunciantes pueden utilizar cookies o tecnologías similares para mostrar anuncios relevantes.
+
+7. SEGURIDAD
+
+Implementamos medidas de seguridad razonables para proteger su información. Sin embargo, ningún método de transmisión por Internet es 100% seguro.
+
+8. PRIVACIDAD DE MENORES
+
+Nuestra aplicación no está dirigida a menores de 13 años. No recopilamos intencionalmente información de menores.
+
+9. CAMBIOS EN LA POLÍTICA
+
+Nos reservamos el derecho de modificar esta política en cualquier momento. Los cambios entrarán en vigor al publicar la nueva versión en la aplicación.
+
+10. CONTACTO
+
+Si tiene preguntas sobre esta Política de Privacidad, visitenos en nuestra web:
+https://innovaappsco.github.io/
+o contactenos a través del siguiente email:
+innovaapps.co@gmail.com
+
+Al continuar usando SarcasIA: Frases e Imágenes, usted reconoce haber leído, entendido y aceptado esta Política de Privacidad en su totalidad.
