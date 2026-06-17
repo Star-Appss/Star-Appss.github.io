@@ -7,7 +7,7 @@ const APPS_DATA = [
       category: 'Entretenimiento',
       rating: 4.9,
       downloads: '10.000+',
-      imageUrl: 'img/1mom.jpg',
+      imageUrl: 'img/img1.png',
       UrlApp: 'you_mom/index.html',
       playStoreUrl: 'https://play.google.com/store/apps/details?id=com.mobincube.i_miss_you_mom_mourning.sc_8KH3WZ',
       tags: ['Imagenes', 'Madre,', 'Duelo']
