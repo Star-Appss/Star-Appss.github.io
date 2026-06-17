@@ -4,7 +4,7 @@ const APPS_DATA = [
       id: '1',
       name: 'I miss you mom - Mourning',
       shortDescription: 'Realiza conversiones exactas entre Bolívares (Bs), Dólares (USD), Euros (EUR) y USDT en segundos..',
-      category: 'Productividad',
+      category: 'Entretenimiento',
       rating: 4.9,
       downloads: '10.000+',
       imageUrl: 'img/1mom.jpg',
@@ -26,14 +26,14 @@ const APPS_DATA = [
     },
     {
       id: '3',
-      name: 'SarcasIA',
-      shortDescription: '🎭 El mejor repertorio de indirectas, frases y generaciones IA para compartir.',
+      name: 'Indirectas de todo tipo',
+      shortDescription: '🎭 El mejor repertorio de indirectas, frases para compartir.',
       category: 'Entretenimiento',
       rating: 4.8,
-      downloads: '10+',
-      imageUrl: 'img/img3.png',
-      UrlApp: 'SarcasIA/index.html',
-      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.indirectas.frases_imagenes_IA',
+      downloads: '10.000+',
+      imageUrl: 'img/img2.png',
+      UrlApp: 'indirectas/index.html',
+      playStoreUrl: 'https://play.google.com/store/apps/details?id=com.mobincube.indirectas_para_todos.sc_E34REU',
       tags: ['Indirectas', 'Humor Negro', 'Frases']
     }
   ];
