@@ -156,7 +156,7 @@ const APPS_DATA = [
             <div class="flex items-center justify-between pt-4 border-t border-slate-700/50">
                <div class="flex items-center text-slate-400 text-sm">
                   <i data-lucide="download" class="w-4 h-4 mr-1"></i>
-                  ${app.downloads}
+                   <span class="gradient-text">${app.downloads}</span>
                </div>
                
                <a 
