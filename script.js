@@ -3,7 +3,7 @@ const APPS_DATA = [
     {
       id: '1',
       name: 'I miss you mom - Mourning',
-      shortDescription: 'Realiza conversiones exactas entre Bolívares (Bs), Dólares (USD), Euros (EUR) y USDT en segundos..',
+      shortDescription: 'App dedicada a ese ser tan especial llamado madre, aún después de muerta ..',
       category: 'Entretenimiento',
       rating: 4.9,
       downloads: '10.000+',
