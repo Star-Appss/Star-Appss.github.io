@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Cookies - Star Apps</title>
+    
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos Personalizados -->
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 fallback */
+            color: #f8fafc;
+        }
+
+        /* Glassmorphism Effect Class */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Text Gradient Effect */
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animation Utilities */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+
+        /* Back button */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 12px 24px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-50 selection:bg-primary-500 selection:text-white overflow-x-hidden">
+    
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i> Volver
+    </button>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 md:p-12 animate-fade-in-up">
+                <h1 class="text-4xl font-bold text-white mb-8 text-center">Política de Cookies</h1>
+                
+                <div class="prose prose-invert max-w-none space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">1. ¿Qué son las Cookies?</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Las cookies son pequeños archivos de texto que se almacenan en su dispositivo (computadora, tablet o teléfono móvil) 
+                            cuando visita un sitio web. Contienen información que el sitio web puede recuperar en futuras visitas.
+                        </p>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            Las cookies se utilizan comúnmente para mejorar la experiencia del usuario, recordar preferencias y analizar 
+                            el tráfico web.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">2. Cookies que Utilizamos</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-4">
+                            Star Apps utiliza un número limitado de cookies necesarias para el funcionamiento básico del sitio web:
+                        </p>
+                        
+                        <h3 class="text-xl font-semibold text-white mt-6 mb-3">Cookies Esenciales</h3>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-2">
+                            Estas cookies son necesarias para el funcionamiento básico del sitio web. Permiten funciones como:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Mantenimiento de la sesión de usuario</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Funcionalidades de seguridad básicas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Funcionamiento correcto de la interface</span>
+                            </li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold text-white mt-6 mb-3">Cookies de Rendimiento</h3>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-2">
+                            Estas cookies recopilan información sobre cómo los usuarios interactúan con nuestro sitio web, 
+                            ayudándonos a mejorar el rendimiento y la funcionalidad:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Páginas visitadas y rutas de navegación</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Errores en la navegación</span>
+                            </li>
+                        </ul>
+
+                        <h3 class="text-xl font-semibold text-white mt-6 mb-3">Cookies de Funcionalidad</h3>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-2">
+                            Estas cookies permiten que el sitio web recuerde las elecciones que usted hace:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Preferencias de temas (claro/oscuro)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Configuraciones de privacidad</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">3. Duración de las Cookies</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-4">
+                            Las cookies se clasifican según su duración:
+                        </p>
+                        <ul class="space-y-3 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Cookies de sesión:</strong> Se eliminan automáticamente cuando cierra el navegador.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Cookies persistentes:</strong> Permanecen en su dispositivo hasta que expiran o las elimina manualmente.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">4. Cómo Gestionar las Cookies</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-4">
+                            Usted puede gestionar las cookies a través de la configuración de su navegador. Cada navegador tiene 
+                            opciones para:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Bloquear todas las cookies</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Bloquear cookies de terceros</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Eliminar cookies existentes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Notificar antes de aceptar cookies</span>
+                            </li>
+                        </ul>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            Ten en cuenta que bloquear todas las cookies puede afectar la funcionalidad del sitio web y la experiencia 
+                            del usuario.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">5. Cookies de Terceros</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Nuestro sitio web no utiliza cookies de terceros de publicidad ni de análisis avanzado.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">6. Cambios en esta Política</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Star Apps se reserva el derecho de modificar esta Política de Cookies en cualquier momento. Las 
+                            modificaciones entrarán en vigencia inmediatamente después de su publicación en el sitio web.
+                        </p>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            Le recomendamos revisar esta política periódicamente para estar al tanto de cualquier cambio.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">7. Contacto</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Si tiene alguna pregunta o inquietud sobre nuestra Política de Cookies, puede contactarnos a través de:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6 mt-4">
+                            <li class="flex items-center">
+                                <i data-lucide="mail" class="w-5 h-5 text-primary-400 mr-3"></i>
+                                <span>consultas.apps.jrondon@gmail.com</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="globe" class="w-5 h-5 text-primary-400 mr-3"></i>
+                                <span>Star-Appss.github.io</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-800/50 rounded-xl p-6 mt-12 border-l-4 border-primary-500">
+                        <p class="text-slate-300 text-lg">
+                            Última actualización: <strong>04 de enero de 2026</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          
+          <!-- Brand -->
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-2 text-white font-bold text-xl mb-4">
+               <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-lg flex items-center justify-center">
+                 <i data-lucide="smartphone" class="text-white w-5 h-5"></i>
+              </div>
+              <span>Star<span class="text-primary-400"> Apps</span></span>
+            </div>
+            <p class="text-slate-400 mb-6 max-w-sm">
+              Desarrollamos el futuro a través de aplicaciones móviles innovadoras. 
+              Calidad, diseño y rendimiento en cada línea de código.
+            </p>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-span-1 md:col-span-2">
+            <h3 class="text-white font-semibold mb-4">Contacto</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="mail" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>consultas.apps.jrondon@gmail.com</span>
+              </li>
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="globe" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>Star-Appss.github.io</span>
+              </li>
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>Mérida, Ve</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links -->
+          <div>
+             <h3 class="text-white font-semibold mb-4">Empresa</h3>
+             <ul class="space-y-2 text-slate-400">
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#hero">Inicio</button></li>
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#about">Sobre Nosotros</button></li>
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#apps">Portafolio</button></li>
+                <li><a href="javascript:void(0)" class="hover:text-primary-400 transition-colors">Política de Privacidad</a></li>
+             </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-slate-500 text-sm mb-4 md:mb-0" id="current-year">
+            &copy; 2026 Star Apps. Todos los derechos reservados.
+          </p>
+          <div class="flex space-x-6 text-sm text-slate-500">
+            <a href="terminos.html" class="hover:text-white transition-colors">Términos</a>
+            <a href="politica_privacidad.html" class="hover:text-white transition-colors">Privacidad</a>
+            <a href="cookies.html" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Inicializar iconos de Lucide
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+        // Año dinámico en footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = `© ${currentYear} Star Apps. Todos los derechos reservados.`;
+            }
+        });
+    </script>
+</body>
+</html>

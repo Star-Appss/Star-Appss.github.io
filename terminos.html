@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - Star Apps</title>
+    
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos Personalizados -->
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 fallback */
+            color: #f8fafc;
+        }
+
+        /* Glassmorphism Effect Class */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Text Gradient Effect */
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animation Utilities */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+
+        /* Back button */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 12px 24px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-50 selection:bg-primary-500 selection:text-white overflow-x-hidden">
+    
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+        Volver
+    </button>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 md:p-12 animate-fade-in-up">
+                <h1 class="text-4xl font-bold text-white mb-8 text-center">Términos y Condiciones</h1>
+                
+                <div class="prose prose-invert max-w-none space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">1. Aceptación de los Términos</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Al acceder y usar el sitio web de Star Apps, usted acepta estar sujeto a estos Términos y Condiciones. 
+                            Si no está de acuerdo con estos términos, por favor no utilice nuestro sitio web.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">2. Uso del Sitio Web</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-4">
+                            El contenido del sitio web de Star Apps tiene fines informativos y promocionales. Usted se compromete a:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Utilizar el sitio web de manera legal y ética</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>No realizar actividades que dañen o interrumpan el funcionamiento del sitio</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>No intentar acceder a áreas restringidas del sitio web</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>No compartir información falsa o engañosa</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">3. Propiedad Intelectual</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Todo el contenido del sitio web de Star Apps, incluyendo pero no limitado a textos, imágenes, logotipos, 
+                            diseños, código fuente y materiales de promoción, es propiedad exclusiva de Star Apps o de sus proveedores 
+                            de contenido y está protegido por las leyes de propiedad intelectual.
+                        </p>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            No está permitido reproducir, distribuir, modificar o usar cualquier contenido del sitio web sin el consentimiento 
+                            expreso por escrito de Star Apps.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">4. Descarga de Aplicaciones</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-4">
+                            Al descargar una aplicación desde el sitio web de Star Apps, usted acepta:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Utilizar la aplicación de acuerdo con sus términos de uso individuales</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Aceptar los permisos necesarios para el funcionamiento de la aplicación</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Mantener actualizada la aplicación para garantizar su seguridad</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Reportar cualquier problema o vulnerabilidad de seguridad</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">5. Responsabilidad</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-4">
+                            Star Apps se esfuerza por proporcionar información precisa y actualizada en su sitio web. Sin embargo:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>El contenido se proporciona "tal cual" sin garantías de ningún tipo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Star Apps no se responsabiliza por daños directos o indirectos derivados del uso del sitio web</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>No se garantiza la disponibilidad continua del sitio web</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Star Apps se reserva el derecho de modificar el contenido sin previo aviso</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">6. Privacidad</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            La privacidad de nuestros usuarios es importante para nosotros. Al utilizar el sitio web de Star Apps, 
+                            usted acepta nuestra Política de Privacidad, que describe cómo recopilamos, usamos y protegemos su información.
+                        </p>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            Para más información, consulte nuestra <a href="politica_privacidad.html" class="text-primary-400 hover:text-primary-300 transition-colors">Política de Privacidad</a>.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">7. Modificaciones de los Términos</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Star Apps se reserva el derecho de modificar estos Términos y Condiciones en cualquier momento. 
+                            Las modificaciones entrarán en vigencia inmediatamente después de su publicación en el sitio web.
+                        </p>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            Le recomendamos revisar estos términos periódicamente para estar al tanto de cualquier cambio.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">8. Ley Aplicable</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Estos Términos y Condiciones se rigen por las leyes de Colombia. Cualquier disputa relacionada con el uso 
+                            del sitio web de Star Apps será resuelta en los tribunales competentes de Norte de Santander.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">9. Contacto</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Si tiene alguna pregunta sobre estos Términos y Condiciones, puede contactarnos a través de:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6 mt-4">
+                            <li class="flex items-center">
+                                <i data-lucide="mail" class="w-5 h-5 text-primary-400 mr-3"></i>
+                                <span>consultas.apps.jrondon@gmail.com</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="globe" class="w-5 h-5 text-primary-400 mr-3"></i>
+                                <span>Star-Appss.github.io</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-800/50 rounded-xl p-6 mt-12 border-l-4 border-primary-500">
+                        <p class="text-slate-300 text-lg">
+                            Última actualización: <strong>04 de enero de 2026</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          
+          <!-- Brand -->
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-2 text-white font-bold text-xl mb-4">
+               <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-lg flex items-center justify-center">
+                 <i data-lucide="smartphone" class="text-white w-5 h-5"></i>
+              </div>
+              <span>Star<span class="text-primary-400"> Apps</span></span>
+            </div>
+            <p class="text-slate-400 mb-6 max-w-sm">
+              Desarrollamos el futuro a través de aplicaciones móviles innovadoras. 
+              Calidad, diseño y rendimiento en cada línea de código.
+            </p>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-span-1 md:col-span-2">
+            <h3 class="text-white font-semibold mb-4">Contacto</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="mail" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>consultas.apps.jrondon@gmail.com</span>
+              </li>
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="globe" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>Star-Appss.github.io</span>
+              </li>
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>Mérida, Ve</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links -->
+          <div>
+             <h3 class="text-white font-semibold mb-4">Empresa</h3>
+             <ul class="space-y-2 text-slate-400">
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#hero">Inicio</button></li>
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#about">Sobre Nosotros</button></li>
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#apps">Portafolio</button></li>
+                <li><a href="javascript:void(0)" class="hover:text-primary-400 transition-colors">Política de Privacidad</a></li>
+             </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-slate-500 text-sm mb-4 md:mb-0" id="current-year">
+            &copy; 2026 Star Apps. Todos los derechos reservados.
+          </p>
+          <div class="flex space-x-6 text-sm text-slate-500">
+            <a href="terminos.html" class="hover:text-white transition-colors">Términos</a>
+            <a href="politica_privacidad.html" class="hover:text-white transition-colors">Privacidad</a>
+            <a href="cookies.html" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Inicializar iconos de Lucide
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+        // Año dinámico en footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = `© ${currentYear} Star Apps. Todos los derechos reservados.`;
+            }
+        });
+    </script>
+</body>
+</html>

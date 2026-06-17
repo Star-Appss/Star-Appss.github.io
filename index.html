@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Apps | Vitrina de Aplicaciones</title>
+    
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                900: '#0c4a6e',
+              },
+              secondary: {
+                500: '#6366f1',
+                600: '#4f46e5',
+              }
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.1/",
+        "react": "https://aistudiocdn.com/react@^19.2.1",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="/index.css">
+  </head>
+  <body class="bg-slate-900 text-slate-50 selection:bg-primary-500 selection:text-white overflow-x-hidden">
+    
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md transition-all duration-300" id="navbar">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          
+          <!-- Logo -->
+          <div class="flex items-center flex-shrink-0 cursor-pointer js-scroll-trigger" data-target="#hero">
+            <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-xl flex items-center justify-center shadow-lg mr-2">
+               <i data-lucide="smartphone" class="text-white w-6 h-6"></i>
+            </div>
+            <span class="font-bold text-xl">Star<span class="text-primary-400"> Apps</span></span>
+          </div>
+          
+          <!-- Desktop Menu -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="#hero" class="nav-link text-white bg-slate-800 px-3 py-2 rounded-md text-sm font-medium js-scroll-trigger" data-target="#hero">Inicio</a>
+              <a href="#apps" class="nav-link text-slate-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-md text-sm font-medium transition-colors js-scroll-trigger" data-target="#apps">Aplicaciones</a>
+              <a href="#about" class="nav-link text-slate-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-md text-sm font-medium transition-colors js-scroll-trigger" data-target="#about">Nosotros</a>
+              <a href="#contact" class="nav-link text-slate-300 hover:text-white hover:bg-slate-800 px-3 py-2 rounded-md text-sm font-medium transition-colors js-scroll-trigger" data-target="#contact">Contacto</a>
+            </div>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <div class="-mr-2 flex md:hidden">
+            <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none transition-colors">
+              <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div class="md:hidden hidden bg-slate-900 border-b border-slate-800" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-slate-800 js-scroll-trigger" data-target="#hero">Inicio</a>
+          <a href="#apps" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 js-scroll-trigger" data-target="#apps">Aplicaciones</a>
+          <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 js-scroll-trigger" data-target="#about">Nosotros</a>
+          <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 js-scroll-trigger" data-target="#contact">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
+        <!-- Background Blobs -->
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none overflow-hidden">
+           <div class="absolute top-20 left-10 w-72 h-72 bg-primary-600/20 rounded-full blur-[100px] animate-blob mix-blend-multiply filter"></div>
+           <div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary-600/20 rounded-full blur-[100px] animate-blob animation-delay-2000 mix-blend-multiply filter"></div>
+           <div class="absolute top-1/2 left-1/2 w-80 h-80 bg-purple-600/20 rounded-full blur-[100px] animate-blob animation-delay-4000 mix-blend-multiply filter"></div>
+        </div>
+  
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <div class="inline-flex items-center px-4 py-2 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur-sm mb-8 animate-fade-in-up">
+              <span class="flex h-2 w-2 relative mr-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              <span class="text-sm text-slate-300 font-medium">Nuevas apps disponibles ahora</span>
+          </div>
+  
+          <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 animate-fade-in-up delay-100">
+            Creamos experiencias <br class="hidden md:block" />
+            <span class="gradient-text">digitales móviles</span>
+          </h1>
+          
+          <p class="mt-4 text-xl text-slate-400 max-w-2xl mx-auto mb-10 animate-fade-in-up delay-200">
+            En Star Apps, transformamos ideas en aplicaciones intuitivas, potentes y hermosas. 
+            Explora nuestro catálogo y descubre el futuro en tu bolsillo.
+          </p>
+  
+          <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
+            <button class="js-scroll-trigger inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-primary-600 hover:bg-primary-700 md:text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary-500/25 cursor-pointer" data-target="#apps">
+              Ver Aplicaciones
+              <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+            </button>
+            <button class="js-scroll-trigger inline-flex items-center justify-center px-8 py-4 border border-slate-700 text-base font-medium rounded-full text-slate-300 bg-slate-800/50 hover:bg-slate-800 backdrop-blur-sm md:text-lg transition-all hover:text-white cursor-pointer" data-target="#contact">
+              Contáctanos
+            </button>
+          </div>
+  
+
+        </div>
+      </section>
+
+      <!-- Apps Grid Section -->
+      <section id="apps" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Nuestras Aplicaciones</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">
+              Explora nuestra colección de aplicaciones diseñadas para mejorar tu productividad, 
+              entretenimiento y estilo de vida.
+            </p>
+          </div>
+  
+          <!-- Filter Tabs -->
+          <div class="flex flex-wrap justify-center gap-2 mb-12" id="category-filters">
+            <!-- Buttons injected by JS -->
+          </div>
+  
+          <!-- Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="apps-grid">
+             <!-- Cards injected by JS -->
+          </div>
+          
+          <div id="no-results" class="hidden text-center py-20">
+             <i data-lucide="package-open" class="w-16 h-16 text-slate-600 mx-auto mb-4"></i>
+             <p class="text-slate-500 text-lg">No se encontraron aplicaciones en esta categoría.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+           <div class="glass-card rounded-3xl p-8 md:p-12 text-center border border-slate-700">
+               <h2 class="text-3xl font-bold text-white mb-6">¿Por qué Star Apps?</h2>
+               <p class="text-slate-300 text-lg max-w-3xl mx-auto leading-relaxed">
+                   Somos un equipo apasionado por la tecnología móvil. Creemos que una gran aplicación no solo debe funcionar bien, 
+                   sino que debe ser una extensión natural del usuario. Solo Desde 2026, hemos lanzado más de 3 aplicaciones exitosas 
+                   en la Play Store, acumulando miles de descargas y reseñas positivas. Nuestra meta para el próximo año es 
+                   triplicar nuestro impacto y seguir innovando.
+               </p>
+           </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          
+          <!-- Brand -->
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-2 text-white font-bold text-xl mb-4">
+               <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-lg flex items-center justify-center">
+                 <i data-lucide="smartphone" class="text-white w-5 h-5"></i>
+              </div>
+              <span>Star<span class="text-primary-400"> Apps</span></span>
+            </div>
+            <p class="text-slate-400 mb-6 max-w-sm">
+              Desarrollamos el futuro a través de aplicaciones móviles innovadoras. 
+              Calidad, diseño y rendimiento en cada línea de código.
+            </p>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-span-1 md:col-span-2">
+            <h3 class="text-white font-semibold mb-4">Contacto</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="mail" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>consultas.apps.jrondon@gmail.com</span>
+              </li>
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="globe" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>Star-Appss.github.io</span>
+              </li>
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>Mérida, Ve</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links -->
+          <div>
+             <h3 class="text-white font-semibold mb-4">Empresa</h3>
+             <ul class="space-y-2 text-slate-400">
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#hero">Inicio</button></li>
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#about">Sobre Nosotros</button></li>
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#apps">Portafolio</button></li>
+                <li><a href="javascript:void(0)" class="hover:text-primary-400 transition-colors">Política de Privacidad</a></li>
+             </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-slate-500 text-sm mb-4 md:mb-0" id="current-year">
+            &copy; 2026 Star Apps. Todos los derechos reservados.
+          </p>
+          <div class="flex space-x-6 text-sm text-slate-500">
+            <a href="terminos.html" class="hover:text-white transition-colors">Términos</a>
+            <a href="politica_privacidad.html" class="hover:text-white transition-colors">Privacidad</a>
+            <a href="cookies.html" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Año dinámico en footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = `© ${currentYear} Star Apps. Todos los derechos reservados.`;
+            }
+        });
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

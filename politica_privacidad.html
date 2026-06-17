@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Star Apps</title>
+    
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos Personalizados -->
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 fallback */
+            color: #f8fafc;
+        }
+
+        /* Glassmorphism Effect Class */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Text Gradient Effect */
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animation Utilities */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+
+        /* Back button */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 12px 24px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-50 selection:bg-primary-500 selection:text-white overflow-x-hidden">
+    
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <i data-lucide="arrow-left" class="w-5 h-5 mr-2"></i>
+        Volver
+    </button>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 md:p-12 animate-fade-in-up">
+                <h1 class="text-4xl font-bold text-white mb-8 text-center">Política de Privacidad</h1>
+                
+                <div class="prose prose-invert max-w-none space-y-8">
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">1. Introducción</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            En Star Apps, valoramos la privacidad de nuestros usuarios. Esta Política de Privacidad describe cómo 
+                            recopilamos, usamos, compartimos y protegemos la información personal que usted nos proporciona al 
+                            utilizar nuestro sitio web y aplicaciones.
+                        </p>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            Al acceder y usar nuestros servicios, usted acepta las prácticas descritas en esta política.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">2. Información que Recopilamos</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-4">
+                            Recopilamos información de diferentes formas cuando usted interacts con nuestros servicios:
+                        </p>
+                        <ul class="space-y-3 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Información personal:</strong> Nombre, correo electrónico, dirección, número de teléfono, etc., cuando se registra o usa nuestros servicios.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Datos de uso:</strong> Información sobre cómo interactúa con nuestro sitio web y aplicaciones, incluyendo páginas visitadas, tiempo de uso, etc.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Datos de dispositivo:</strong> Tipo de dispositivo, sistema operativo, dirección IP, identificadores únicos de dispositivo, etc.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Cookies y tecnologías similares:</strong> Usamos cookies para mejorar la experiencia del usuario y analizar el tráfico.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">3. Uso de la Información</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-4">
+                            La información que recopilamos se utiliza para:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Proporcionar y mantener nuestros servicios</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Mejorar y personalizar la experiencia del usuario</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Comunicarnos con usted sobre actualizaciones, promociones y soporte</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Analizar y optimizar el rendimiento de nuestros servicios</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Prevenir fraudes y proteger la seguridad de nuestros servicios</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Cumplir con nuestras obligaciones legales</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">4. Compartir la Información</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-4">
+                            Star Apps no vende, alquila ni comparte información personal con terceros para fines de marketing. 
+                            La información puede ser compartida con:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Proveedores de servicios:</strong> Empresas que nos ayudan a operar nuestros servicios, como alojamiento de servers, análisis de datos, etc.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Requisitos legales:</strong> Cuando sea necesario para cumplir con la ley, responder a solicitudes de autoridades competentes.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Protección de derechos:</strong> Cuando sea necesario para proteger los derechos, la propiedad o la seguridad de Star Apps o sus usuarios.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">5. Seguridad de la Información</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Implementamos medidas de seguridad razonables para proteger la información personal contra acceso no autorizado, 
+                            uso indebido, disclosure, alteración o destrucción. Sin embargo, ningún sistema de seguridad es perfecto y 
+                            no podemos garantizar la seguridad absoluta de la información.
+                        </p>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            Le recomendamos mantener sus credenciales de acceso seguras y reportar cualquier actividad sospechosa.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">6. Retención de Datos</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Retenemos la información personal solo por el tiempo necesario para cumplir con los fines para los que fue 
+                            recopilada y para cumplir con nuestras obligaciones legales. Cuando ya no sea necesaria, la información 
+                            personal se eliminará de forma segura.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">7. Derechos de los Usuarios</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-4">
+                            Usted tiene los siguientes derechos con respecto a su información personal:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Acceder a la información personal que tenemos sobre usted</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Corregir información personal incorrecta</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Solicitar la eliminación de su información personal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Restringir el procesamiento de su información personal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Solicitar la portabilidad de su información personal</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Oponerse al procesamiento de su información personal</span>
+                            </li>
+                        </ul>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            Para ejercer estos derechos, puede contactarnos a través de los canales de soporte.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">8. Cookies y Tecnologías Similares</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Usamos cookies y tecnologías similares para mejorar la experiencia del usuario, analizar el tráfico y 
+                            personalizar el contenido. Usted puede gestionar sus preferencias de cookies a través de la configuración 
+                            de su navegador.
+                        </p>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            Para más información sobre nuestro uso de cookies, consulte nuestra <a href="cookies.html" class="text-primary-400 hover:text-primary-300 transition-colors">Política de Cookies</a>.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">9. Cambios en esta Política</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Star Apps se reserva el derecho de modificar esta Política de Privacidad en cualquier momento. Las 
+                            modificaciones entrarán en vigencia inmediatamente después de su publicación en el sitio web.
+                        </p>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            Le recomendamos revisar esta política periódicamente para estar al tanto de cualquier cambio.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">10. Contacto</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Si tiene alguna pregunta o inquietud sobre esta Política de Privacidad, puede contactarnos a través de:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6 mt-4">
+                            <li class="flex items-center">
+                                <i data-lucide="mail" class="w-5 h-5 text-primary-400 mr-3"></i>
+                                <span>consultas.apps.jrondon@gmail.com</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-lucide="globe" class="w-5 h-5 text-primary-400 mr-3"></i>
+                                <span>Star-Appss.github.io</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-800/50 rounded-xl p-6 mt-12 border-l-4 border-primary-500">
+                        <p class="text-slate-300 text-lg">
+                            Última actualización: <strong>04 de enero de 2026</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          
+          <!-- Brand -->
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-2 text-white font-bold text-xl mb-4">
+               <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-lg flex items-center justify-center">
+                 <i data-lucide="smartphone" class="text-white w-5 h-5"></i>
+              </div>
+              <span>Star<span class="text-primary-400"> Apps</span></span>
+            </div>
+            <p class="text-slate-400 mb-6 max-w-sm">
+              Desarrollamos el futuro a través de aplicaciones móviles innovadoras. 
+              Calidad, diseño y rendimiento en cada línea de código.
+            </p>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-span-1 md:col-span-2">
+            <h3 class="text-white font-semibold mb-4">Contacto</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="mail" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>consultas.apps.jrondon@gmail.com</span>
+              </li>
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="globe" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>Star-Appss.github.io</span>
+              </li>
+              <li class="flex items-center text-slate-400">
+                  <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-primary-500"></i>
+                  <span>Mérida, Ve</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links -->
+          <div>
+             <h3 class="text-white font-semibold mb-4">Empresa</h3>
+             <ul class="space-y-2 text-slate-400">
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#hero">Inicio</button></li>
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#about">Sobre Nosotros</button></li>
+                <li><button class="hover:text-primary-400 transition-colors js-scroll-trigger text-left" data-target="#apps">Portafolio</button></li>
+                <li><a href="javascript:void(0)" class="hover:text-primary-400 transition-colors">Política de Privacidad</a></li>
+             </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p class="text-slate-500 text-sm mb-4 md:mb-0" id="current-year">
+            &copy; 2026 Star Apps. Todos los derechos reservados.
+          </p>
+          <div class="flex space-x-6 text-sm text-slate-500">
+            <a href="terminos.html" class="hover:text-white transition-colors">Términos</a>
+            <a href="politica_privacidad.html" class="hover:text-white transition-colors">Privacidad</a>
+            <a href="cookies.html" class="hover:text-white transition-colors">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Inicializar iconos de Lucide
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+        // Año dinámico en footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = `© ${currentYear} Star Apps. Todos los derechos reservados.`;
+            }
+        });
+    </script>
+</body>
+</html>
