@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I miss you mom - Mourning</title>
+    <title>Política de Privacidad - I miss you mom - Mourning</title>
+    
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -39,9 +47,8 @@
             }
         }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos Personalizados -->
     <style>
         /* Base Styles */
         body {
@@ -110,74 +117,10 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
         }
-
-        /* Imagen principal */
-        .main-image {
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .main-image:hover {
-            transform: scale(1.02);
-        }
-
-        /* Botones personalizados */
-        .btn-primary {
-            background: linear-gradient(to right, #0ea5e9, #6366f1);
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(to right, #0284c7, #4f46e5);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-
-        /* Feature cards */
-        .feature-card {
-            background: rgba(30, 41, 59, 0.5);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 24px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            background: rgba(30, 41, 59, 0.7);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .feature-icon {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(to right, #0ea5e9, #6366f1);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-        }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-50 selection:bg-primary-500 selection:text-white overflow-x-hidden">
 
-        
     <!-- Navbar -->
     <nav class="fixed w-full z-50 top-0 left-0 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md transition-all duration-300" id="navbar">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -189,20 +132,20 @@
                <i data-lucide="smartphone" class="text-white w-6 h-6"></i>
             </div>
                 <a href="../index.html">
-                    <span class="font-bold text-xl">Star<span class="text-primary-400"> Apps</span></span>
+                    <span class="font-bold text-xl">Star <span class="text-primary-400">Apps</span></span>
                 </a>
             
           </div>
           <!-- Desktop Menu -->
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
-              <a href="../index.html" class="nav-link text-white bg-slate-800 px-3 py-2 rounded-md text-sm font-medium js-scroll-trigger">Inicio</a>
+              <a href="index.html" class="nav-link text-white bg-slate-800 px-3 py-2 rounded-md text-sm font-medium js-scroll-trigger">Volver</a>
             </div>
           </div>
           
           <!-- Mobile Menu Button -->
           <div class="-mr-2 flex md:hidden">
-            <a href="../index.html">
+            <a href="index.html">
                 <button  class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none transition-colors" >
                 <i data-lucide="arrow-left" class="w-6 h-6" id="menu-icon"></i>
                 </button>
@@ -212,213 +155,154 @@
       </div>
     </nav>
 
-
     <!-- Main Content -->
     <main class="pt-32 pb-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Imagen principal -->
-                <div class="animate-fade-in-up">
-                    <img src="../img/1mom.jpg" alt="I miss you mom - Mourning" class="main-image w-full mb-6">
-                    <!-- Galería miniatura -->
-                    <div class="grid grid-cols-3 gap-4 mt-6">
-                        <div class="aspect-[9/16]">
-                            <img src="1.png" alt="Imagen 1" class="main-image w-full h-full object-cover">
-                        </div>
-                        <div class="aspect-[9/16]">
-                            <img src="2.png" alt="Imagen 2" class="main-image w-full h-full object-cover">
-                        </div>
-                        <div class="aspect-[9/16]">
-                            <img src="3.png" alt="Imagen 3" class="main-image w-full h-full object-cover">
-                        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 md:p-12 animate-fade-in-up">
+
+            <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight mb-6 animate-fade-in-up delay-100 text-center">
+                 Políticas de Privacidad de la app <br class="hidden md:block" />
+                <span class="gradient-text">I miss you mom - Mourning</span>
+            </h1>
+               
+                <div class="prose prose-invert max-w-none space-y-8">
+                    <div class="bg-slate-800/50 rounded-xl p-6 mb-8 border-l-4 border-primary-500">
+                        <p class="text-slate-300 text-lg">
+                            Versión 2.0 | 17 de junio de 2026
+                        </p>
                     </div>
-                </div>
-
-                <!-- Contenido -->
-                <div class="animate-fade-in-up delay-100">
-                    <div class="inline-flex items-center px-4 py-2 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur-sm mb-6">
-                        <span class="flex h-2 w-2 relative mr-3">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                        </span>
-                        <span class="text-sm text-slate-300 font-medium">Te extraño Mamá</span>
-                    </div>
-
-                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-                        I miss you mom - <span class="gradient-text"> Mourning</span>
-                    </h1>
-
-                    <p class="mt-4 text-xl text-slate-400 mb-8 leading-relaxed">
-                        "Te extraño Mamá" es una app dedicada a ese ser tan especial como la madre y que aún después de muerta su huella es inconmensurable, por eso te mostramos una serie de imágenes, frases y poemas que te ayudarán a expresar esos sentimientos de tristeza que llevas dentro y así desahogarte de tanto dolor.
+                    <p class="text-slate-300 text-lg leading-relaxed">
+                        La app <strong>"I miss you mom - Mourning"</strong>, en lo sucesivo de este documento será denominada <strong>"I miss you mom"</strong>.
+                    </p>
+                    <p class="text-slate-300 text-lg leading-relaxed">
+                        En nuestra app "I miss you mom", nos comprometemos a proteger su privacidad. Esta Política de Privacidad describe cómo 
+                        recopilamos, usamos y protegemos su información cuando utiliza nuestra aplicación móvil.
                     </p>
 
-                    <!-- Botones -->
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://play.google.com/store/apps/details?id=com.mobincube.i_miss_you_mom_mourning.sc_8KH3WZ" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           class="btn-primary inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-full text-white md:text-lg">
-                            <i data-lucide="play" class="w-5 h-5 mr-2"></i>
-                            Descargar <br> en Google Play
-                        </a>
-                        <a href="politica_privacidad.html" 
-                           class="btn-secondary inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-full text-white md:text-lg">
-                            <i data-lucide="shield" class="w-5 h-5 mr-2"></i>
-                            Políticas de Privacidad
-                        </a>
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">1. Información que Recopilamos</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            I miss you mom, es una aplicación cuyo objetivo principal es permitir a los usuarios contenido (imagenes y textos) 
+                            que les sea de agrado y de utilidad para compartir o simplemente leer, para ello se muestra una galeria de imagenes, 
+                            una base de datos de frases y una base de datos de poemas.
+                        </p>
+                        <div class="bg-amber-500/10 border-l-4 border-amber-500 rounded-r-lg p-4 mt-4 mb-4">
+                            <p class="text-amber-200 text-lg leading-relaxed">
+                                <strong>ES IMPORTANTE DESTACAR:</strong> Esta aplicación NO solicita, NI almacena ningún tipo de información personal 
+                                identificable del usuario, como nombre, correo electrónico, teléfono, 
+                                ubicación o cualquier otra información sensible. Las galerias y bases de datos se obtienen de forma anónima 
+                                y no requieren registro, ni identificación del usuario.
+                                Sin embargo, vale la  pena destacar que para su correcto funcionamiento y financiamiento, se recopilan identificadores de dispositivo anónimos y datos de uso técnico a través de servicios de terceros (Google AdMob).
+                            </p>
+                        </div>
                     </div>
 
-                    <!-- Features -->
-                    <div class="mt-12 grid grid-cols-2 gap-6">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-primary-600/20 rounded-full flex items-center justify-center">
-                                <i data-lucide="image-plus" class="w-5 h-5 text-primary-400"></i>
-                            </div>
-                            <span class="text-slate-300">Las mejores imagenes</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-secondary-600/20 rounded-full flex items-center justify-center">
-                                <i data-lucide="list-collapse" class="w-5 h-5 text-secondary-400"></i>
-                            </div>
-                            <span class="text-slate-300">Miles de Frases</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-primary-600/20 rounded-full flex items-center justify-center">
-                                <i data-lucide="scroll-text" class="w-5 h-5 text-primary-400"></i>
-                            </div>
-                            <span class="text-slate-300">Bellos Poemas para dedicar</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-secondary-600/20 rounded-full flex items-center justify-center">
-                                <i data-lucide="smartphone" class="w-5 h-5 text-secondary-400"></i>
-                            </div>
-                            <span class="text-slate-300">Fácil de usar</span>
-                        </div>
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">2. Información No Personal</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Podemos recopilar información no personal sobre su uso de la aplicación, como el tipo de dispositivo, 
+                            el sistema operativo, la versión de la aplicación, la duración de la sesión y las funciones utilizadas. 
+                            Esta información se recopila de forma anónima y se utiliza para mejorar la funcionalidad, el rendimiento 
+                            y compatibilidad de la aplicación.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">3. Privacidad de los menores</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Esta aplicación no está dirigida a niños menores de 13 años. No recopilamos conscientemente información personal 
+                            de niños. Si detectamos que un menor nos ha proporcionado datos de manera involuntaria, procederemos a eliminarlos 
+                            de forma inmediata.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">4. Compartir</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            La aplicación incluye la funcionalidad para compartir a través de aplicaciones externas 
+                            (como WhatsApp, Telegram, redes sociales, etc.). Al utilizar esta función, el usuario puede compartir texto e 
+                            imágenes desde la aplicación. Esta información compartida es la misma que se muestra públicamente 
+                            en la interfaz de la aplicación y no contiene datos personales del usuario. El compartido se realiza directamente 
+                            desde su dispositivo usando los servicios nativos del sistema operativo.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">5. Publicidad (AdMob)</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Nuestra aplicación utiliza Google AdMob para mostrar anuncios. Integraremos esta funcionalidad para financiar 
+                            el desarrollo de la aplicación. Google y sus socios pueden utilizar cookies y otros identificadores para mostrar 
+                            anuncios basados en sus visitas anteriores a nuestra aplicación y a otros sitios web. Puede obtener más información 
+                            sobre cómo Google utiliza los datos y cómo puede controlar la información utilizada para la personalización de 
+                            anuncios visitando las Política de Privacidad de Google en el siguiente enlace. 
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6">
+                            <li class="flex items-start">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-orange-400 mt-1 mr-3 flex-shrink-0"></i>
+                                <span class="text-orange-400"><a href="https://policies.google.com/privacy?hl=es" target="_blank"><strong>Política de Privacidad de Google</strong></a>.</span>
+                            </li>
+                        </ul>
+                        
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            Los anuncios se muestran sin recopilar información personal adicional del usuario; solo se utilizan identificadores 
+                            de dispositivo estándar para optimizar los anuncios mostrados.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">6. Permisos de la Aplicación</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            I miss you mom no requiere ningun permiso especial debido a que los datos e imagenes se descargan localmente con el app, lo que la hace funcionar incluso sin internet.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">7. Seguridad de la Información</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Implementamos medidas de seguridad razonables para proteger la información que se procesa en nuestra aplicación. 
+                            Dado que no almacenamos información sensible localmente ni en servidores externos. Recomendamos mantener su dispositivo 
+                            actualizado y protegido con contraseñas o métodos de autenticación biométrica.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">8. Retención y eliminación de datos</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            La app no ofrece creación de cuentas (por lo que no requiere un enlace de eliminación de cuenta).
+                            Al no almacenar datos personales en servidores externos, no conservamos historiales de usuarios. Los identificadores publicitarios
+                             son gestionados directamente por Google, y usted puede restablecerlos o limitar el seguimiento de anuncios desde los ajustes de 
+                             privacidad de su dispositivo Android.
+                        </p>
+                    </div> 
+                    
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">9. Cambios en esta Política de Privacidad</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Podemos actualizar nuestra Política de Privacidad ocasionalmente, especialmente cuando se añadan nuevas funcionalidades.
+                            Le notificaremos cualquier cambio publicando la nueva Política de Privacidad 
+                            en la aplicación. Se le aconseja revisar esta Política de Privacidad periódicamente para cualquier cambio.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">10. Contacto</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Si tiene alguna pregunta sobre esta Política de Privacidad, puede contactarnos a través de:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6 mt-4">
+                                <li class="flex items-center text-slate-400">
+                                    <i data-lucide="mail" class="w-5 h-5 mr-3 text-primary-500"></i>
+                                    <span>consultas.apps.jrondon@gmail.com</span>
+                                </li>
+                                <li class="flex items-center text-slate-400">
+                                    <i data-lucide="globe" class="w-5 h-5 mr-3 text-primary-500"></i>
+                                    <span>Star-Appss.github.io</span>
+                                </li>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
-            <!-- Sección de Características Principales -->
-            <section class="mt-24 animate-fade-in-up delay-200">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-                        <i data-lucide="rocket" class="w-10 h-10 text-primary-400 inline-block mr-3"></i>
-                        Características Principales
-                    </h2>
-                    <p class="text-slate-400 max-w-2xl mx-auto text-lg">
-                        Todo lo que necesitas para recordar de manera especial a tú Madre
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                    <!-- Característica 1 -->
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i data-lucide="image-plus" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-white mb-3">Imagenes para Recordar</h3>
-                        <p class="text-slate-300">
-                            Nuestra app goza de una extensa galeria en la cual podras encontrar ese sentimiento que deeas expresar.
-                        </p>
-                    </div>
-
-                    <!-- Característica 2 -->
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i data-lucide="heart-plus" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-white mb-3">Frases del Corazón</h3>
-                        <p class="text-slate-300">
-                             Cientos de frases llenas de puro amor para recordar a nuestra progenitora, una base de datos extensa la cual podras tener a tu disposición.
-                        </p>
-                    </div>
-
-                    <!-- Característica 3 -->
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i data-lucide="scroll-text" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-white mb-3">Dedica Poemas</h3>
-                        <p class="text-slate-300">
-                            Sea porque este lejos y la extrañemos o porque ya nunca mas regresará, Dedicar un poema es un detalle muy especial para recordar a nuestra Madre.
-                        </p>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- Sección de Ventajas -->
-            <section class="mt-24 animate-fade-in-up delay-300">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-                        <i data-lucide="briefcase" class="w-10 h-10 text-primary-400 inline-block mr-3"></i>
-                        ¿Por qué elegir "I miss you mom"?
-                    </h2>
-                    <p class="text-slate-400 max-w-2xl mx-auto text-lg">
-                        La herramienta perfecta para quienes necesitan recordar su Madrecita.
-                    </p>
-                </div>
-
-                <div class="glass-card rounded-3xl p-8 md:p-12">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <!-- Ventaja 1 -->
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-primary-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="clock" class="w-8 h-8 text-primary-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Visual</h3>
-                            <p class="text-slate-300">Galeria completa y actual</p>
-                        </div>
-
-                        <!-- Ventaja 2 -->
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-secondary-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="activity" class="w-8 h-8 text-secondary-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Al grano</h3>
-                            <p class="text-slate-300">Diseñada para que puedas encontrar lo que andas buscando</p>
-                        </div>
-
-                        <!-- Ventaja 3 -->
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-primary-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="sun" class="w-8 h-8 text-primary-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Diseño Moderno</h3>
-                            <p class="text-slate-300">Interfaz limpia y moderna con tema oscuro</p>
-                        </div>
-
-                        <!-- Ventaja 4 -->
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-secondary-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i data-lucide="wifi" class="w-8 h-8 text-secondary-400"></i>
-                            </div>
-                            <h3 class="text-xl font-semibold text-white mb-2">Ligera y Rápida</h3>
-                            <p class="text-slate-300">Funciona fluida incluso en conexiones inestables</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Final -->
-            <section class="mt-24 text-center animate-fade-in-up delay-400">
-                <div class="glass-card rounded-3xl p-8 md:p-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-                       Siente, comparte, recuerda..!
-                    </h2>
-                    <p class="text-xl text-slate-400 mb-8 max-w-3xl mx-auto">
-                        Descarga "I miss you mom": una app para mostrar tus sentimientos mas profundos.
-                    </p>
-                    <a href="https://play.google.com/store/apps/details?id=com.mobincube.i_miss_you_mom_mourning.sc_8KH3WZ" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       class="btn-primary inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-full text-white">
-                        <i data-lucide="play" class="w-6 h-6 mr-3"></i>
-                        Descargar Ahora en Google Play
-                    </a>
-                </div>
-            </section>
         </div>
     </main>
 
@@ -432,7 +316,7 @@
                         <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-lg flex items-center justify-center">
                             <i data-lucide="smartphone" class="text-white w-5 h-5"></i>
                         </div>
-                        <span>Star<span class="text-primary-400"> Apps</span></span>
+                        <span>Star <span class="text-primary-400">Apps</span></span>
                     </div>
                     <p class="text-slate-400 mb-6 max-w-sm">
                         Desarrollamos el futuro a través de aplicaciones móviles innovadoras. 
@@ -473,7 +357,7 @@
 
             <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-slate-500 text-sm mb-4 md:mb-0" id="current-year">
-                    &copy; 2026 Innova Apps. Todos los derechos reservados.
+                    &copy; 2024 Star Apps. Todos los derechos reservados.
                 </p>
                 <div class="flex space-x-6 text-sm text-slate-500">
                     <a href="../terminos.html" class="hover:text-white transition-colors">Términos</a>
@@ -485,19 +369,17 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         // Inicializar iconos de Lucide
         if (window.lucide) {
             lucide.createIcons();
         }
-
         // Año dinámico en footer
         document.addEventListener('DOMContentLoaded', function() {
             const currentYear = new Date().getFullYear();
             const yearElement = document.getElementById('current-year');
             if (yearElement) {
-                yearElement.textContent = `© ${currentYear} Innova Apps. Todos los derechos reservados.`;
+                yearElement.textContent = `© ${currentYear} Star Apps. Todos los derechos reservados.`;
             }
         });
     </script>
