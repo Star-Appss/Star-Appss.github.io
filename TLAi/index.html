@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-        <title>Descarga la Santa Biblia</title>
+    <title>Descarga la Santa Biblia</title>
     <style>
         * {
             margin: 0;
@@ -62,22 +62,71 @@
             letter-spacing: -0.5px;
         }
 
-        .content-wrapper {
+        /* Tarjeta unificada superior (Descripción corta + QR) */
+        .unified-top-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-card);
             display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 24px;
         }
 
-        .left-section {
+        .unified-top-card .description-summary {
+            flex: 1.3;
+        }
+
+        .unified-top-card .description-summary h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .unified-top-card .description-summary p {
+            font-size: 11px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+
+        .unified-top-card .qr-container {
+            flex: 0.7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qr-image {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        /* Secciones de dos columnas generales */
+        .grid-section {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+
+        .grid-section > div {
             flex: 1;
+        }
+
+        .left-column-group {
             display: flex;
             flex-direction: column;
+            gap: 16px;
         }
 
         .thumbnail-container {
             position: relative;
             width: 100%;
-            /* Quitamos aspect-ratio para que la altura se adapte a la imagen */
             border-radius: 20px;
             overflow: hidden;
             cursor: pointer;
@@ -93,7 +142,7 @@
 
         .miniature {
             width: 100%;
-            height: auto; /* Cambiamos a auto para que muestre toda la imagen completa */
+            height: auto;
             display: block;
         }
 
@@ -110,8 +159,8 @@
         }
 
         .play-icon {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
         }
 
         .play-icon svg {
@@ -123,18 +172,16 @@
         .features-card {
             background: var(--bg-card);
             border-radius: 16px;
-            padding: 10px 8px;
+            padding: 14px 10px;
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow-card);
-            min-height: 160px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-top: 16px;
         }
 
         .features-card h3 {
-            font-size: 11.5px;
+            font-size: 11px;
             font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 6px;
@@ -147,7 +194,7 @@
         }
 
         .features-card ul li {
-            font-size: 12px;
+            font-size: 10.5px;
             color: var(--text-secondary);
             padding: 2px 0;
             display: flex;
@@ -155,52 +202,51 @@
             gap: 4px;
         }
 
-        .right-section {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            justify-content: center;
-        }
-
-        .description-summary {
+        /* Tarjeta estilo Google Play para rellenar espacio */
+        .rating-card {
             background: var(--bg-card);
             border-radius: 16px;
-            padding: 16px;
+            padding: 14px 10px;
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow-card);
-        }
-
-        .description-summary h3 {
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-        }
-
-        .description-summary p {
-            font-size: 12px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        .qr-container {
+            text-align: center;
             display: flex;
-            justify-content: center;
-            padding: 12px;
-    background: #1a1a2500;
-    border-radius: 16px;
-    border: 1px solid #2a2a3a05;
-            box-shadow: var(--shadow-card);
-            min-height: 160px;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
         }
 
+        .rating-card .stars {
+            color: #f1c40f;
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 2px;
+        }
 
-        .qr-image {
-            width: 120px;
-            height: 120px;
-            object-fit: contain;
+        .rating-card .rating-score {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .rating-card .rating-text {
+            font-size: 10.5px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .rating-card .store-badge {
+            font-size: 9px;
+            color: var(--accent-primary);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-download-container {
+            margin: 24px 0;
+            text-align: center;
         }
 
         .btn-download {
@@ -360,52 +406,69 @@
 </head>
 <body>
     <div class="container">
+                <!-- 1. Pequeño aviso -->
             <div style="background: rgba(0, 212, 255, 0.1); border: 1px solid var(--accent-primary); border-radius: 12px; padding: 10px; text-align: center; margin-bottom: 15px; font-size: 12px; color: var(--text-secondary);">
                 💡 <strong style="color: var(--text-primary);">¿Problemas para descargar?</strong> Toca los tres puntos <strong style="color: var(--text-primary);">(...)</strong> en la esquina superior y selecciona <strong style="color: var(--accent-primary);">"Abrir en el navegador"</strong>.
             </div>
+        <!-- 1. Encabezado -->
         <div class="header">
             <h1>Descarga la Santa Biblia</h1>
         </div>
 
-        <div class="content-wrapper">
-            <div class="left-section">
-                <div class="thumbnail-container" id="thumbnailContainer">
-                    <img src="miniatura.png" alt="Miniatura" class="miniature" id="miniatura">
-                    <div class="play-overlay">
-                        <div class="play-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+        <!-- 2. Primera sección unificada: Descripción corta + QR transparente dentro del mismo fondo -->
+        <div class="unified-top-card">
+            <div class="description-summary">
+                <h3>Santa Biblia App</h3>
+                <p><span class="highlight">Lleva la palabra de Dios contigo</span>, Biblia Lenguaje Actual es el app en español más completa, interactiva y personalizable para tu crecimiento espiritual diario.</p>
+                <p>Si buscas una Biblia de estudio fácil de entender, con herramientas avanzadas de lectura y entretenimiento cristiano, ¡esta es la app ideal para ti!.</p>
+            </div>
+            <div class="qr-container">
+                <img src="QR_Biblia.png" alt="Codigo QR" class="qr-image">
+            </div>
+        </div>
+
+        <!-- 3. Botón de descarga gigante centrado -->
+        <div class="btn-download-container">
+            <a href="https://play.google.com/store/apps/details?id=com.biblia.Lenguaje_Actual_interconfecional_TLAi" class="btn-download">Descargar La palabra de Dios</a>
+        </div>
+
+        <!-- 4. Segunda sección: Características + Valoración (izq) y Miniatura en tamaño natural (der) -->
+        <div class="grid-section">
+            <div class="left-column-group">
                 <div class="features-card">
-                    <h3>Principales características</h3>
+                    <h3>Características principales</h3>
                     <ul>
                         <li>📶 Sin internet</li>
                         <li>💰 100% Gratis</li>
                         <li>📱 Fácil de usar</li>
                         <li>🎨 Modo claro/oscuro</li>
+                        <li>📖 Lector interactivo</li>
+                        <li>📅 Planes de lectura</li>
+                        <li>🕊️ Versículo del día</li>
+                        <li>📻 Radios cristianas</li>
                     </ul>
                 </div>
-            </div>
-
-            <div class="right-section">
-                <div class="description-summary">
-                    <h3>Santa Biblia App</h3>
-                    <p><span class="highlight">Lleva la palabra de Dios contigo</span>, Biblia Lenguaje Actual es el app en español más completa, interactiva y personalizable para tu crecimiento espiritual diario.</p>
-                <p>Si buscas una Biblia de estudio fácil de entender, con herramientas avanzadas de lectura y entretenimiento cristiano, ¡esta es la app ideal para ti!.</p>
+                <!-- Tarjeta de estrellas estilo Google Play para equilibrar el espacio vertical -->
+                <div class="rating-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="rating-score">4.9 / 5.0</div>
+                    <div class="rating-text">+10,000 Descargas</div>
+                    <div class="store-badge">Google Play Store</div>
                 </div>
-                <div class="qr-container">
-                    <img src="QR_Biblia.png" alt="Codigo QR" class="qr-image">
+            </div>
+            <div class="thumbnail-container" id="thumbnailContainer">
+                <img src="miniatura.png" alt="Miniatura" class="miniature" id="miniatura">
+                <div class="play-overlay">
+                    <div class="play-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z"></path>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div style="text-align: center; margin: 30px 0;">
-            <a href="https://play.google.com/store/apps/details?id=com.biblia.Lenguaje_Actual_interconfecional_TLAi" class="btn-download">Descargar La palabra de Dios</a>
-        </div>
-
+        <!-- 5. Sección de descripción completa -->
         <div class="description-section">
             <h2>Descripción</h2>
             <div class="description-content">
@@ -452,9 +515,12 @@
             </div>
         </div>
 
-        <a href="https://play.google.com/store/apps/details?id=com.biblia.Lenguaje_Actual_interconfecional_TLAi" class="btn-download">Descargar La Palabra de Dios</a>
+        <div class="btn-download-container">
+            <a href="https://play.google.com/store/apps/details?id=com.biblia.Lenguaje_Actual_interconfecional_TLAi" class="btn-download">Descargar La Palabra de Dios</a>
+        </div>
     </div>
 
+    <!-- Modal para el video -->
     <div class="modal-overlay" id="videoModal">
         <div class="modal-content">
             <video class="modal-video" id="modalVideo" autoplay playsinline controls>
