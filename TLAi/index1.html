@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Descarga la Santa Biblia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-tertiary: #707080;
+            --accent-primary: #00d4ff;
+            --accent-secondary: #5e60ff;
+            --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #5e60ff 100%);
+            --border-radius: 24px;
+            --border-color: #2a2a3a;
+            --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.4);
+            --shadow-strong: 0 20px 60px rgba(0, 212, 255, 0.15);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: radial-gradient(ellipse at top, #0a0a0f 0%, #030305 100%);
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px 0 20px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .thumbnail-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9/16;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow-card);
+            border: 2px solid var(--border-color);
+        }
+
+        .thumbnail-container:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .miniature {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+            border-radius: 20px;
+        }
+
+        .play-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        .play-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--text-primary);
+        }
+
+        .features-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 10px 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 16px;
+        }
+
+        .features-card h3 {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            text-align: left;
+        }
+
+        .features-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .features-card ul li {
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding: 2px 0;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .right-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .description-summary {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+        }
+
+        .description-summary h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .description-summary p {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .qr-container {
+            display: flex;
+            justify-content: center;
+            padding: 12px;
+            background:  #1a1a2500;
+            border-radius: 16px;
+            border: 1px solid #2a2a3a05;
+            box-shadow: #2a2a3a05;
+            min-height: 160px;
+            align-items: center;
+        }
+
+
+
+        .qr-image {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        .btn-download {
+            display: block;
+            width: 100%;
+            padding: 18px 20px;
+            background: var(--accent-gradient);
+            color: var(--text-primary);
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 16px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow-strong);
+            letter-spacing: -0.3px;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 25px 50px rgba(0, 212, 255, 0.35);
+        }
+
+        .btn-download:active {
+            transform: translateY(0);
+        }
+
+        .description-section {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+            margin-bottom: 30px;
+        }
+
+        .description-section h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .description-content {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .description-content p {
+            margin-bottom: 12px;
+        }
+
+        .description-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 16px 0;
+        }
+
+        .description-content ul li {
+            padding: 6px 0 6px 24px;
+            position: relative;
+            font-size: 13px;
+        }
+
+        .description-content ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-primary);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .description-content .highlight {
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            background: #000;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-strong);
+            aspect-ratio: 9/16;
+        }
+
+        .modal-video {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .modal-close::before,
+        .modal-close::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: var(--text-primary);
+        }
+
+        .modal-close::before {
+            transform: rotate(45deg);
+        }
+
+        .modal-close::after {
+            transform: rotate(-45deg);
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Descarga la Santa Biblia</h1>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="left-section">
+                <div class="thumbnail-container" id="thumbnailContainer">
+                    <img src="miniatura.png" alt="Miniatura" class="miniature" id="miniatura">
+                    <div class="play-overlay">
+                        <div class="play-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-card">
+                    <h3>Principales características</h3>
+                    <ul>
+                        <li>📶 Sin internet</li>
+                        <li>💰 100% Gratis</li>
+                        <li>📱 Fácil de usar</li>
+                        <li>🎨 Modo claro/oscuro</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="description-summary">
+                    <h3>Santa Biblia App</h3>
+                    <p><span class="highlight">Lleva la palabra de Dios contigo</span>, Biblia Lenguaje Actual es el app en español más completa, interactiva y personalizable para tu crecimiento espiritual diario.</p>
+                <p>Si buscas una Biblia de estudio fácil de entender, con herramientas avanzadas de lectura y entretenimiento cristiano, ¡esta es la app ideal para ti!.</p>
+                </div>
+                <div class="qr-container">
+                    <img src="QR_Biblia.png" alt="Codigo QR" class="qr-image">
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://play.google.com/store/apps/details?id=com.biblia.Lenguaje_Actual_interconfecional_TLAi" class="btn-download">Descargar La palabra de Dios</a>
+        </div>
+
+        <div class="description-section">
+            <h2>Descripción</h2>
+            <div class="description-content">
+                <p><span class="highlight">Lleva la palabra de Dios contigo</span> con la Biblia Lenguaje Actual (TLAi), la aplicación de Biblia en español más completa, interactiva y personalizable para tu crecimiento espiritual diario.</p>
+                <p>Si buscas una Biblia de estudio fácil de entender, con herramientas avanzadas de lectura y entretenimiento cristiano, ¡esta es la app ideal para ti! La traducción en Lenguaje Actual (TLA) te permite comprender las Sagradas Escrituras de forma clara, sencilla y fiel a los textos originales.</p>
+                <ul>
+                    <li><span class="highlight">📖 EL MEJOR LECTOR BÍBLICO INTERACTIVO</span><br>Optimiza tu tiempo de lectura y personaliza cada versículo de la Santa Biblia:
+                        <ul>
+                            <li>Resaltar texto: Subraya tus versículos favoritos con diferentes colores.</li>
+                            <li>Favoritos: Guarda los textos bíblicos que más te inspiren para leerlos más tarde.</li>
+                            <li>Notas personales: Añade reflexiones, apuntes de predicaciones o pensamientos en cada versículo.</li>
+                            <li>Copiar y compartir: Copia pasajes fácilmente o genera hermosas imágenes con frases bíblicas para compartir en tus redes sociales.</li>
+                        </ul>
+                    </li>
+                    <li><span class="highlight">📅 PLAN DE LECTURA BÍBLICA Y HISTORIAL</span><br>¡Mantén el hábito de leer la Palabra de Dios todos los días!
+                        <ul>
+                            <li>Elige el plan de lectura que mejor se adapte a tu ritmo: 1 año, 6 meses o 3 meses.</li>
+                            <li>Accede a tu historial de lectura rápido para revisar los últimos 5 capítulos leídos y nunca perder el hilo de tu estudio bíblico.</li>
+                        </ul>
+                    </li>
+                    <li><span class="highlight">🎨 TOTALMENTE PERSONALIZABLE (Tema Claro y Oscuro)</span><br>Disfruta de una lectura cómoda a cualquier hora del día:
+                        <ul>
+                            <li>Cambia fácilmente entre el tema oscuro (ideal para la noche) y el tema claro.</li>
+                            <li>Editor de colores avanzado: Modifica y edita cualquier color dentro de la interfaz para crear una experiencia visual única y a tu gusto.</li>
+                        </ul>
+                    </li>
+                    <li><span class="highlight">🔒 RESPALDO SEGURO (Backup)</span><br>No pierdas nunca tu progreso espiritual. Descarga una copia de seguridad (backup) de todos tus versículos favoritos, notas y resaltados para restaurarlos cuando cambies de dispositivo.</li>
+                    <li><span class="highlight">🕊️ VERSÍCULO DEL DÍA</span><br>Empieza cada mañana con la motivación espiritual que necesitas en nuestra sección especial:
+                        <ul>
+                            <li>Versículo del Día: Una palabra de aliento diaria para tu vida.</li>
+                            <li>Salmo Diario: Sabiduría y protección a través de los salmos.</li>
+                            <li>Evangelio del Día: Sigue las enseñanzas de Jesús paso a paso.</li>
+                        </ul>
+                    </li>
+                    <li><span class="highlight">📻 RADIOS CRISTIANAS EN VIVO</span><br>Acompaña tu día, tus oraciones o tus momentos de relajación con la mejor música:
+                        <ul>
+                            <li>Más de 50 estaciones de radios cristianas e instrumentales en línea.</li>
+                            <li>Alabanzas, adoración, prédicas y música instrumental con transmisión de alta calidad.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Descarga hoy la Biblia Lenguaje Actual (TLAi) y transforma tu teléfono en una poderosa herramienta de fe. Disfruta de la mejor Biblia gratis con funciones premium diseñadas para ti.</p>
+                <p><span class="highlight">¡Dios te bendiga!</span></p>
+            </div>
+        </div>
+
+        <a href="https://play.google.com/store/apps/details?id=com.biblia.Lenguaje_Actual_interconfecional_TLAi" class="btn-download">Descargar La Palabra de Dios</a>
+    </div>
+
+    <div class="modal-overlay" id="videoModal">
+        <div class="modal-content">
+            <video class="modal-video" id="modalVideo" autoplay playsinline controls>
+                <source src="video_vertical.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+            <div class="modal-close" id="modalClose"></div>
+        </div>
+    </div>
+
+    <script>
+        const thumbnailContainer = document.getElementById('thumbnailContainer');
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+        const modalClose = document.getElementById('modalClose');
+
+        function openModal() {
+            modal.style.display = 'flex';
+            modalVideo.load();
+            modalVideo.play();
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            modalVideo.pause();
+            modalVideo.currentTime = 0;
+            document.body.style.overflow = '';
+        }
+
+        thumbnailContainer.addEventListener('click', openModal);
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
