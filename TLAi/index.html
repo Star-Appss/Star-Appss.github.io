@@ -73,7 +73,7 @@
         .thumbnail-container {
             position: relative;
             width: 100%;
-            aspect-ratio: 9/16;
+            /* Quitamos aspect-ratio para que la altura se adapte a la imagen */
             border-radius: 20px;
             overflow: hidden;
             cursor: pointer;
@@ -89,8 +89,7 @@
 
         .miniature {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto; /* Cambiamos a auto para que muestre toda la imagen completa */
             display: block;
         }
 
@@ -192,7 +191,6 @@
             min-height: 160px;
             align-items: center;
         }
-
 
 
         .qr-image {
