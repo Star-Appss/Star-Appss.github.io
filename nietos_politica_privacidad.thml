@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Te Extraño Mamá</title>
+    
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Estilos Personalizados -->
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 fallback */
+            color: #f8fafc;
+        }
+
+        /* Glassmorphism Effect Class */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Text Gradient Effect */
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animation Utilities */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+
+        /* Back button */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 12px 24px;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            backdrop-filter: blur(12px);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-50 selection:bg-primary-500 selection:text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-slate-800 bg-slate-900/80 backdrop-blur-md transition-all duration-300" id="navbar">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          
+          <!-- Logo -->
+          <div class="flex items-center flex-shrink-0 cursor-pointer js-scroll-trigger" data-target="#hero">
+            <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-xl flex items-center justify-center shadow-lg mr-2">
+               <i data-lucide="smartphone" class="text-white w-6 h-6"></i>
+            </div>
+                <a href="../index.html">
+                    <span class="font-bold text-xl">Star <span class="text-primary-400">Apps</span></span>
+                </a>
+            
+          </div>
+          <!-- Desktop Menu -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="index.html" class="nav-link text-white bg-slate-800 px-3 py-2 rounded-md text-sm font-medium js-scroll-trigger">Volver</a>
+            </div>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <div class="-mr-2 flex md:hidden">
+            <a href="index.html">
+                <button  class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none transition-colors" >
+                <i data-lucide="arrow-left" class="w-6 h-6" id="menu-icon"></i>
+                </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 md:p-12 animate-fade-in-up">
+
+            <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight mb-6 animate-fade-in-up delay-100 text-center">
+                 Política de Privacidad de la app <br class="hidden md:block" />
+                <span class="gradient-text">Te Extraño Mamá</span>
+            </h1>
+
+                <div class="prose prose-invert max-w-none space-y-8">
+                    <div class="bg-slate-800/50 rounded-xl p-6 mb-8 border-l-4 border-primary-500">
+                        <p class="text-slate-300 text-lg">
+                            Última actualización: Agosto 2026
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">1. Introducción</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Bienvenido a Te Extraño Mamá. Esta aplicación está diseñada para ofrecer un espacio de recuerdo y consuelo, con frases, imágenes, videos y poemas para honrar la memoria de quienes ya no están. Al utilizar nuestra aplicación, usted acepta los términos y condiciones descritos en esta Política de Privacidad.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">2. Recolección de Información</h2>
+                        <h3 class="text-xl font-semibold text-white mb-3 mt-4">2.1 Información que recopilamos:</h3>
+                        <ul class="space-y-3 text-slate-300 text-lg leading-relaxed mt-4">
+                            <li class="flex items-start">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Registro técnico del estado de aceptación de estas políticas</strong> en el dispositivo para gestionar el acceso inicial.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="file-text" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Contenido de la aplicación</strong> (frases, imágenes, videos y poemas) descargado desde nuestros servidores en formato JSON y almacenado temporalmente en el caché del dispositivo para su visualización, sin que dicha información se asocie a ningún usuario.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="megaphone" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Datos técnicos de publicidad</strong> gestionados por el SDK de Google AdMob (consulte la sección 6).</span>
+                            </li>
+                        </ul>
+                        <h3 class="text-xl font-semibold text-white mb-3 mt-6">2.2 Información que NO recopilamos:</h3>
+                        <ul class="space-y-3 text-slate-300 text-lg leading-relaxed mt-4">
+                            <li class="flex items-start">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Información personal identificable de ningún tipo, como nombres, correos electrónicos, cuentas o números telefónicos.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Datos de ubicación geográfica o rastreo de movimiento del dispositivo.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="x-circle" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Lista de contactos, archivos multimedia personales, historial de navegación web o información de otras aplicaciones instaladas.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">3. Uso de la Información</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            La información recopilada se utiliza exclusivamente para:
+                        </p>
+                        <ul class="space-y-3 text-slate-300 text-lg leading-relaxed mt-4">
+                            <li class="flex items-start">
+                                <i data-lucide="settings" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Personalizar la experiencia de lectura y visualización en tiempo real según el tamaño de fuente y tema visual seleccionado por el usuario.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="search" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Permitir el correcto funcionamiento de las búsquedas, filtros, favoritos, resaltados y notas asociadas.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="refresh-cw" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Garantizar la persistencia y la sincronización automática de las configuraciones del usuario entre las diferentes pantallas de la aplicación.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">4. Almacenamiento de Datos</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Para garantizar su privacidad, la aplicación funciona de manera local y no requiere de una conexión permanente a Internet para el manejo de su información. Los datos se resguardan de forma estrictamente local en su dispositivo mediante:
+                        </p>
+                        <ul class="space-y-3 text-slate-300 text-lg leading-relaxed mt-4">
+                            <li class="flex items-start">
+                                <i data-lucide="database" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>DataStore (preferencias locales):</strong> Utilizado únicamente para recordar si el usuario ya aceptó las políticas de privacidad.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="hard-drive" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Caché del dispositivo:</strong> El contenido de la aplicación (frases, imágenes, videos y poemas) descargado desde nuestros servidores en formato JSON se almacena temporalmente en el caché del dispositivo para su visualización, sin que se asocie a ningún usuario.</span>
+                            </li>
+                        </ul>
+                        <div class="bg-amber-500/10 border-l-4 border-amber-500 rounded-r-lg p-4 mt-4 mb-4">
+                            <p class="text-amber-200 text-lg leading-relaxed">
+                                Ninguno de sus datos es transferido, compartido ni subido a servidores externos bajo ninguna circunstancia, salvo la descarga inicial del contenido desde nuestros servidores y la comunicación técnica del SDK de publicidad descrita en la sección 6.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">5. Permisos</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            La aplicación solicita los siguientes permisos específicos, declarados en su manifiesto:
+                        </p>
+                        <ul class="space-y-3 text-slate-300 text-lg leading-relaxed mt-4">
+                            <li class="flex items-start">
+                                <i data-lucide="wifi" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Acceso a Internet / Red (INTERNET):</strong> Requerido únicamente para realizar la descarga del contenido en formato JSON desde nuestros servidores, cargar las imágenes y videos, y mostrar los anuncios de publicidad. Una vez descargado el contenido, este es accesible sin conexión a internet.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="activity" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span><strong>Acceso al estado de red (ACCESS_NETWORK_STATE):</strong> Requerido por el SDK de publicidad para determinar la conectividad y mostrar anuncios adecuados.</span>
+                            </li>
+                        </ul>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">
+                            La aplicación no solicita permisos de almacenamiento, ubicación, cámara, micrófono ni acceso a contactos. La descarga o compartición de videos se realiza mediante un proveedor de archivos temporal (FileProvider) sin requerir permisos adicionales.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">6. Publicidad</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Nuestra aplicación muestra anuncios proporcionados por Google AdMob con el fin de sostener el desarrollo y mantenimiento técnico de la aplicación de forma gratuita para el usuario. Al utilizar la aplicación, usted acepta la inclusión de estos anuncios.
+                        </p>
+                        <ul class="space-y-3 text-slate-300 text-lg leading-relaxed mt-4">
+                            <li class="flex items-start">
+                                <i data-lucide="megaphone" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>El SDK de Google AdMob y sus socios publicitarios pueden recopilar y procesar identificadores de publicidad del dispositivo (como el ID de publicidad de Google), dirección IP, tipo de dispositivo, datos de interacción con los anuncios y otra información técnica con el fin de mostrar anuncios personalizados o no personalizados, según las normativas vigentes de la plataforma móvil y la configuración de su dispositivo.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="layout" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Los anuncios se presentan de forma discreta (banners en la parte inferior de las pantallas principales e intersticiales ocasionales con frecuencia controlada) y no interrumpen el contenido esencial ni la navegación del sistema.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="external-link" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Puede obtener más información sobre cómo Google trata los datos en la <a href="https://policies.google.com/privacy" target="_blank" class="text-primary-400 hover:underline"><strong>Política de Privacidad de Google</strong></a> y sobre los anuncios en las Políticas de anuncios de Google.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="sliders-horizontal" class="w-5 h-5 text-primary-500 mt-1 mr-3 flex-shrink-0"></i>
+                                <span>Usted puede limitar la personalización de anuncios desde la configuración de su dispositivo Android (Configuración &gt; Google &gt; Anuncios &gt; Eliminar ID de publicidad / Optar por no recibir anuncios personalizados).</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">7. Seguridad</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            La información que la aplicación maneja de forma local (el estado de aceptación de políticas y el contenido en caché) no sale de su teléfono celular, lo que reduce drásticamente el riesgo de filtraciones externas. Sin embargo, la seguridad de dichos datos también depende del cuidado y protección de acceso que usted mantenga sobre su propio dispositivo. La información procesada por el SDK de publicidad se rige por las políticas de privacidad de Google y sus socios.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">8. Privacidad de Menores</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Esta aplicación proporciona contenido de carácter emotivo y reflexivo apto para toda la familia. No recopilamos intencionalmente ningún tipo de información de identificación personal de menores de edad ni de ningún otro usuario.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">9. Cambios en la Política</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Nos reservamos el derecho de modificar esta política en cualquier momento para adaptarla a futuras actualizaciones técnicas de la aplicación, incluyendo cambios en los proveedores de publicidad. Cualquier cambio sustancial entrará en vigor inmediatamente al publicar la nueva versión de este texto dentro de la aplicación.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-semibold text-white mb-4">10. Contacto</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Si tiene preguntas o dudas sobre esta Política de Privacidad, contáctenos directamente a través de nuestro correo electrónico de soporte:
+                        </p>
+                        <ul class="space-y-2 text-slate-300 pl-6 mt-4">
+                            <li class="flex items-center text-slate-400">
+                                <i data-lucide="mail" class="w-5 h-5 mr-3 text-primary-500"></i>
+                                <span>consultas.apps.jrondon@gmail.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 text-white font-bold text-xl mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="smartphone" class="text-white w-5 h-5"></i>
+                        </div>
+                        <span>Star <span class="text-primary-400">Apps</span></span>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-sm">
+                        Desarrollamos el futuro a través de aplicaciones móviles innovadoras. 
+                        Calidad, diseño y rendimiento en cada línea de código.
+                    </p>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contacto</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-slate-400">
+                            <i data-lucide="mail" class="w-5 h-5 mr-3 text-primary-500"></i>
+                            <span>consultas.apps.jrondon@gmail.com</span>
+                        </li>
+                        <li class="flex items-center text-slate-400">
+                            <i data-lucide="globe" class="w-5 h-5 mr-3 text-primary-500"></i>
+                            <span>Star-Appss.github.io</span>
+                        </li>
+                        <li class="flex items-center text-slate-400">
+                            <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-primary-500"></i>
+                            <span>Mérida, Ve</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Empresa</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="../index.html" class="hover:text-primary-400 transition-colors">Inicio</a></li>
+                        <li><a href="../index.html#about" class="hover:text-primary-400 transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="../index.html#apps" class="hover:text-primary-400 transition-colors">Portafolio</a></li>
+                        <li><a href="../politica_privacidad.html" class="hover:text-primary-400 transition-colors">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-500 text-sm mb-4 md:mb-0" id="current-year">
+                    &copy; 2024 Star Apps. Todos los derechos reservados.
+                </p>
+                <div class="flex space-x-6 text-sm text-slate-500">
+                    <a href="../terminos.html" class="hover:text-white transition-colors">Términos</a>
+                    <a href="../politica_privacidad.html" class="hover:text-white transition-colors">Privacidad</a>
+                    <a href="../cookies.html" class="hover:text-white transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Inicializar iconos de Lucide
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+        // Año dinámico en footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = `© ${currentYear} Star Apps. Todos los derechos reservados.`;
+            }
+        });
+    </script>
+</body>
+</html>
